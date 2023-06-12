@@ -1,0 +1,49 @@
+@import "./base/reset";
+@import "./base/vars";
+
+html,
+body {
+  height: 100vh;
+  background-color: #dddddd;
+  font-family: "Poppins", sans-serif;
+}
+
+a {
+  color: #000000;
+}
+
+#root,
+.App {
+  min-height: 100%;
+}
+
+.App {
+  padding-top: 40px;
+  position: relative;
+  z-index: 999;
+  h1 {
+    text-align: center;
+    color: palevioletred;
+    font-size: 80px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    margin-bottom: 50px;
+  }
+}
+
+.wrapper {
+  position: relative;
+  width: 700px;
+  height: auto;
+  padding: 12px 0 4px;
+  margin: 0 auto;
+  background-color: #fff;
+  z-index: 100;
+  filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.3));
+
+  .todos {
+    position: relative;
+    margin-top: 10px;
+    overflow: hidden;
+  }
+}

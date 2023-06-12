@@ -1,0 +1,58 @@
+.task {
+  position: relative;
+  display: flex;
+  padding: 16px;
+  border-top: 2px solid #e2e2e2;
+
+  input {
+    appearance: none;
+    margin-right: 40px;
+    cursor: pointer;
+
+    &::before {
+      content: "";
+      position: absolute;
+      display: block;
+      top: 16px;
+      left: 16px;
+      width: 30px;
+      height: 30px;
+      border-radius: 999px;
+      border: 2px solid rgba(0, 0, 0, 0.3);
+    }
+    &::after {
+      content: url("../../assets/check.svg");
+      position: absolute;
+      top: 16px;
+      left: 23px;
+      width: 14px;
+      height: 14px;
+      transform: scale(2.2);
+      opacity: 0;
+      transition: all 0.1s ease-in-out;
+    }
+
+    &:checked {
+      &::after {
+        opacity: 1;
+      }
+    }
+  }
+
+  div {
+    font-size: 20px;
+    max-width: 70%;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    word-break: break-word;
+  }
+
+  span {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    transform: scale(2);
+    user-select: none;
+    cursor: pointer;
+  }
+}
